@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoxLink — Conditions Générales d'Utilisation</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8251A;
+  --red-dim: rgba(232,37,26,0.12);
+  --red-border: rgba(232,37,26,0.25);
+  --bg: #080808;
+  --surface: #111111;
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.75);
+  --text-dim: rgba(255,255,255,0.35);
+  --white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(16px);
+  z-index: 100;
+}
+.logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
+.logo span { color: var(--red); }
+.header-sep { width: 1px; height: 20px; background: var(--border); }
+.header-label { font-size: 13px; color: var(--text-dim); font-weight: 500; }
+.container { max-width: 760px; margin: 0 auto; padding: 72px 32px 120px; }
+.hero { margin-bottom: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red-dim); border: 1px solid var(--red-border);
+  color: var(--red); font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800; color: var(--white);
+  line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 20px;
+}
+.hero h1 span { color: var(--red); }
+.hero-meta { font-size: 14px; color: var(--text-dim); }
+.hero-meta strong { color: rgba(255,255,255,0.5); }
+.summary-box {
+  background: var(--red-dim); border: 1px solid var(--red-border);
+  border-radius: 16px; padding: 28px 32px; margin-bottom: 56px;
+}
+.summary-box p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+.summary-box strong { color: var(--white); }
+.section { margin-bottom: 52px; }
+.section-num {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+  color: var(--red); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px;
+}
+.section h2 {
+  font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700;
+  color: var(--white); margin-bottom: 20px; letter-spacing: -0.3px;
+}
+.section p { font-size: 15px; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+.section p:last-child { margin-bottom: 0; }
+.policy-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+.policy-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text); line-height: 1.6; }
+.policy-list li::before { content: '—'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.warning-box {
+  background: rgba(232,37,26,0.06); border: 1px solid rgba(232,37,26,0.2);
+  border-radius: 14px; padding: 24px 28px; margin: 20px 0;
+}
+.warning-box p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0; }
+.warning-box strong { color: var(--red); }
+.divider { height: 1px; background: var(--border); margin: 48px 0; }
+.contact-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 32px;
+}
+.contact-box h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+.contact-box p { font-size: 15px; color: var(--text); line-height: 1.7; }
+.contact-box a { color: var(--red); text-decoration: none; font-weight: 600; }
+.footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); text-align: center; font-size: 13px; color: var(--text-dim); }
+.footer strong { color: rgba(255,255,255,0.4); }
+@media (max-width: 600px) {
+  .site-header { padding: 20px 24px; }
+  .container { padding: 48px 20px 80px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Box<span>Link</span></div>
+  <div class="header-sep"></div>
+  <div class="header-label">Conditions Générales d'Utilisation</div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-tag">📄 CGU</div>
+    <h1>Conditions Générales<br>d'<span>Utilisation</span></h1>
+    <div class="hero-meta">
+      <strong>Dernière mise à jour :</strong> 8 juin 2026 &nbsp;·&nbsp;
+      <strong>Application :</strong> BoxLink (iOS & Android)
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <p><strong>En utilisant BoxLink, vous acceptez ces conditions.</strong> Elles définissent vos droits et responsabilités en tant qu'utilisateur, ainsi que les nôtres en tant qu'éditeur de l'application. Prenez le temps de les lire.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">01 — Présentation</div>
+    <h2>Présentation de BoxLink</h2>
+    <p>BoxLink est une application mobile communautaire dédiée aux boxeurs francophones. Elle permet de trouver des partenaires d'entraînement, consulter des événements boxe, partager des vidéos d'entraînement et accéder à des conseils nutrition.</p>
+    <p>BoxLink est édité par Alexis Lopes Barradas, développeur indépendant basé en France. Contact : <strong>boxlink.app@gmail.com</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">02 — Acceptation</div>
+    <h2>Acceptation des conditions</h2>
+    <p>L'utilisation de BoxLink implique l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, vous devez cesser d'utiliser l'application.</p>
+    <p>Ces CGU peuvent être modifiées à tout moment. Les utilisateurs seront informés de toute modification substantielle via une notification dans l'application.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">03 — Accès et inscription</div>
+    <h2>Accès et création de compte</h2>
+    <p>L'accès à BoxLink est gratuit. La création d'un compte nécessite une adresse email valide et un mot de passe.</p>
+    <p>Pour créer un compte, vous devez :</p>
+    <ul class="policy-list">
+      <li>Avoir au minimum 12 ans (accord parental requis pour les moins de 16 ans)</li>
+      <li>Fournir des informations exactes et à jour</li>
+      <li>Ne pas créer plusieurs comptes avec la même identité</li>
+      <li>Ne pas usurper l'identité d'une autre personne</li>
+      <li>Garder votre mot de passe confidentiel</li>
+    </ul>
+    <p>Vous êtes responsable de toute activité effectuée depuis votre compte.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">04 — Utilisation autorisée</div>
+    <h2>Ce que vous pouvez faire</h2>
+    <p>En tant qu'utilisateur de BoxLink, vous êtes autorisé à :</p>
+    <ul class="policy-list">
+      <li>Créer et personnaliser votre profil boxeur</li>
+      <li>Rechercher et contacter d'autres boxeurs pour des sessions d'entraînement</li>
+      <li>Consulter et s'inscrire à des événements boxe</li>
+      <li>Publier des vidéos de vos entraînements</li>
+      <li>Partager des conseils nutrition sur le fil communautaire</li>
+      <li>Utiliser la messagerie pour organiser des sessions</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">05 — Comportements interdits</div>
+    <h2>Ce qui est strictement interdit</h2>
+    <p>Il est formellement interdit sur BoxLink de :</p>
+    <ul class="policy-list">
+      <li>Harceler, menacer, insulter ou intimider d'autres utilisateurs</li>
+      <li>Publier du contenu violent, offensant, discriminatoire ou illégal</li>
+      <li>Créer de faux profils ou usurper l'identité d'une personne</li>
+      <li>Utiliser l'application à des fins commerciales sans autorisation</li>
+      <li>Collecter des données personnelles d'autres utilisateurs</li>
+      <li>Tenter de pirater, compromettre ou perturber le fonctionnement de l'application</li>
+      <li>Publier du contenu protégé par des droits d'auteur sans autorisation</li>
+      <li>Utiliser des robots ou scripts automatisés</li>
+      <li>Contacter des utilisateurs à des fins non liées à la boxe</li>
+    </ul>
+
+    <div class="warning-box">
+      <p><strong>Conséquences :</strong> Tout manquement à ces règles peut entraîner la suspension temporaire ou la suppression définitive de votre compte, sans préavis ni remboursement.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">06 — Contenu utilisateur</div>
+    <h2>Votre contenu</h2>
+    <p>Tout contenu que vous publiez sur BoxLink (vidéos, photos, messages, posts) reste votre propriété. En le publiant, vous nous accordez une licence non exclusive, mondiale et gratuite pour l'afficher et le diffuser au sein de l'application.</p>
+    <p>Vous garantissez que le contenu que vous publiez :</p>
+    <ul class="policy-list">
+      <li>Vous appartient ou que vous avez les droits nécessaires pour le partager</li>
+      <li>Ne viole pas les droits d'un tiers</li>
+      <li>Est conforme aux présentes CGU et aux lois en vigueur</li>
+    </ul>
+    <p>Nous nous réservons le droit de supprimer tout contenu qui violerait ces conditions, sans obligation de justification.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">07 — Responsabilité</div>
+    <h2>Limitation de responsabilité</h2>
+    <p>BoxLink est une plateforme de mise en relation. Nous ne sommes pas responsables des interactions entre utilisateurs, des sessions d'entraînement organisées via l'application, ni des contenus publiés par les utilisateurs.</p>
+    <p>Nous ne garantissons pas :</p>
+    <ul class="policy-list">
+      <li>L'exactitude des informations figurant sur les profils utilisateurs</li>
+      <li>La disponibilité continue et sans interruption de l'application</li>
+      <li>L'absence de bugs ou erreurs techniques</li>
+    </ul>
+    <p>En cas d'accident ou d'incident lors d'une session d'entraînement organisée via BoxLink, notre responsabilité ne saurait être engagée. Chaque utilisateur est responsable de sa propre sécurité.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">08 — Propriété intellectuelle</div>
+    <h2>Propriété intellectuelle</h2>
+    <p>L'application BoxLink, son logo, son nom, son design et l'ensemble de ses éléments graphiques sont la propriété exclusive de BoxLink et sont protégés par les lois sur la propriété intellectuelle.</p>
+    <p>Toute reproduction, représentation ou exploitation non autorisée de ces éléments est strictement interdite.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">09 — Suppression de compte</div>
+    <h2>Suppression de compte</h2>
+    <p>Vous pouvez supprimer votre compte à tout moment depuis les paramètres de l'application ou en contactant <strong>boxlink.app@gmail.com</strong>.</p>
+    <p>La suppression entraîne l'effacement définitif de votre profil, vos messages, vos vidéos et l'ensemble de vos données personnelles dans un délai de 30 jours.</p>
+    <p>Nous nous réservons le droit de suspendre ou supprimer un compte en cas de violation des présentes CGU.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-num">10 — Droit applicable</div>
+    <h2>Droit applicable et litiges</h2>
+    <p>Les présentes CGU sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité.</p>
+    <p>À défaut d'accord amiable, tout litige relatif à l'interprétation ou l'exécution des présentes CGU sera soumis aux tribunaux compétents du ressort de Paris, France.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-box">
+    <h3>📬 Nous contacter</h3>
+    <p>Pour toute question relative aux présentes CGU :</p>
+    <p style="margin-top:12px">
+      <strong>Email :</strong> <a href="mailto:boxlink.app@gmail.com">boxlink.app@gmail.com</a><br>
+      <strong>Application :</strong> BoxLink — L'app qui fait vivre la boxe
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 <strong>BoxLink</strong> · Tous droits réservés · CGU v1.0</p>
+    <p style="margin-top:8px">Droit français applicable · Tribunaux de Paris compétents</p>
+  </div>
+
+</div>
+</body>
+</html>

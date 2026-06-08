@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoxLink — Politique de confidentialité</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8251A;
+  --red-dim: rgba(232,37,26,0.12);
+  --red-border: rgba(232,37,26,0.25);
+  --bg: #080808;
+  --surface: #111111;
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.75);
+  --text-dim: rgba(255,255,255,0.35);
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(16px);
+  z-index: 100;
+}
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--red); }
+.header-sep { width: 1px; height: 20px; background: var(--border); }
+.header-label { font-size: 13px; color: var(--text-dim); font-weight: 500; }
+
+/* LAYOUT */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 32px 120px;
+}
+
+/* HERO */
+.hero {
+  margin-bottom: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red-dim);
+  border: 1px solid var(--red-border);
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--red); }
+.hero-meta {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.hero-meta strong { color: rgba(255,255,255,0.5); }
+
+/* SUMMARY BOX */
+.summary-box {
+  background: var(--red-dim);
+  border: 1px solid var(--red-border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 56px;
+}
+.summary-box p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+.summary-box strong { color: var(--white); }
+
+/* SECTIONS */
+.section {
+  margin-bottom: 52px;
+}
+.section-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+.section p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.section p:last-child { margin-bottom: 0; }
+
+/* DATA TABLE */
+.data-table {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+.data-row {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.data-row:last-child { border-bottom: none; }
+.data-row.header-row {
+  background: rgba(255,255,255,0.03);
+}
+.data-cell {
+  padding: 16px 20px;
+  font-size: 14px;
+  border-right: 1px solid var(--border);
+  line-height: 1.5;
+}
+.data-cell:last-child { border-right: none; }
+.data-row.header-row .data-cell {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.data-cell strong { color: var(--white); font-weight: 600; }
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.badge-req { background: var(--red-dim); color: var(--red); border: 1px solid var(--red-border); }
+.badge-opt { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.4); border: 1px solid var(--border); }
+
+/* LIST */
+.policy-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+.policy-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+}
+.policy-list li::before {
+  content: '—';
+  color: var(--red);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* RIGHTS BOX */
+.rights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.right-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.right-icon { font-size: 20px; margin-bottom: 8px; }
+.right-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.right-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 48px 0;
+}
+
+/* CONTACT */
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.contact-box h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.contact-box p { font-size: 15px; color: var(--text); line-height: 1.7; }
+.contact-box a { color: var(--red); text-decoration: none; font-weight: 600; }
+.contact-box a:hover { text-decoration: underline; }
+
+/* FOOTER */
+.footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.footer strong { color: rgba(255,255,255,0.4); }
+
+@media (max-width: 600px) {
+  .site-header { padding: 20px 24px; }
+  .container { padding: 48px 20px 80px; }
+  .data-row { grid-template-columns: 1fr; }
+  .data-cell { border-right: none; border-bottom: 1px solid var(--border); }
+  .data-row .data-cell:last-child { border-bottom: none; }
+  .rights-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Box<span>Link</span></div>
+  <div class="header-sep"></div>
+  <div class="header-label">Politique de confidentialité</div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-tag">🔒 Confidentialité</div>
+    <h1>Politique de<br><span>confidentialité</span></h1>
+    <div class="hero-meta">
+      <strong>Dernière mise à jour :</strong> 8 juin 2026 &nbsp;·&nbsp;
+      <strong>Application :</strong> BoxLink (iOS & Android)
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <p>
+      <strong>En bref :</strong> BoxLink collecte uniquement les données nécessaires au bon fonctionnement de l'application — profil, géolocalisation, messages et contenus partagés. Nous ne vendons jamais vos données à des tiers. Vous pouvez demander la suppression de votre compte à tout moment.
+    </p>
+  </div>
+
+  <!-- 1. QUI SOMMES-NOUS -->
+  <div class="section">
+    <div class="section-num">01 — Responsable du traitement</div>
+    <h2>Qui sommes-nous ?</h2>
+    <p>BoxLink est une application mobile développée et exploitée par Alexis Lopes Barradas, développeur indépendant basé en France.</p>
+    <p>Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse : <strong>alexislopesbarradas@gmail.com</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 2. DONNÉES COLLECTÉES -->
+  <div class="section">
+    <div class="section-num">02 — Données collectées</div>
+    <h2>Quelles données collectons-nous ?</h2>
+    <p>Nous collectons uniquement les données nécessaires au fonctionnement de BoxLink :</p>
+
+    <div class="data-table">
+      <div class="data-row header-row">
+        <div class="data-cell">Donnée</div>
+        <div class="data-cell">Utilisation</div>
+        <div class="data-cell">Type</div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Adresse email</strong></div>
+        <div class="data-cell">Création de compte et authentification</div>
+        <div class="data-cell"><span class="badge badge-req">Requis</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Pseudo / Nom</strong></div>
+        <div class="data-cell">Identification dans l'application</div>
+        <div class="data-cell"><span class="badge badge-req">Requis</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Géolocalisation</strong></div>
+        <div class="data-cell">Trouver des boxeurs près de vous</div>
+        <div class="data-cell"><span class="badge badge-req">Requis</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Profil boxeur</strong></div>
+        <div class="data-cell">Catégorie de poids, niveau, objectifs, club</div>
+        <div class="data-cell"><span class="badge badge-req">Requis</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Messages</strong></div>
+        <div class="data-cell">Communication entre utilisateurs</div>
+        <div class="data-cell"><span class="badge badge-req">Requis</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Vidéos / Photos</strong></div>
+        <div class="data-cell">Partage de contenu d'entraînement</div>
+        <div class="data-cell"><span class="badge badge-opt">Optionnel</span></div>
+      </div>
+      <div class="data-row">
+        <div class="data-cell"><strong>Posts nutrition</strong></div>
+        <div class="data-cell">Conseils partagés sur le fil communautaire</div>
+        <div class="data-cell"><span class="badge badge-opt">Optionnel</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3. UTILISATION -->
+  <div class="section">
+    <div class="section-num">03 — Utilisation des données</div>
+    <h2>Comment utilisons-nous vos données ?</h2>
+    <p>Vos données sont utilisées exclusivement pour :</p>
+    <ul class="policy-list">
+      <li>Créer et gérer votre compte utilisateur</li>
+      <li>Vous montrer les boxeurs géolocalisés autour de vous selon vos critères</li>
+      <li>Permettre la messagerie directe entre utilisateurs</li>
+      <li>Afficher les événements boxe près de votre localisation</li>
+      <li>Publier vos vidéos et posts sur les fils communautaires</li>
+      <li>Assurer la sécurité et la modération de la plateforme</li>
+      <li>Vous envoyer des notifications liées à l'activité de votre compte (si activées)</li>
+    </ul>
+    <p>Nous n'utilisons pas vos données à des fins publicitaires. Nous ne revendons pas vos données à des tiers.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4. GÉOLOCALISATION -->
+  <div class="section">
+    <div class="section-num">04 — Géolocalisation</div>
+    <h2>Géolocalisation</h2>
+    <p>BoxLink utilise votre position géographique pour afficher les boxeurs et événements proches de vous. La géolocalisation est utilisée uniquement en premier plan (lorsque l'application est ouverte), jamais en arrière-plan.</p>
+    <p>Votre position exacte n'est jamais affichée aux autres utilisateurs — seule une distance approximative est communiquée (ex. "à 2 km").</p>
+    <p>Vous pouvez désactiver la géolocalisation à tout moment dans les réglages de votre appareil. Certaines fonctionnalités de l'application seront alors limitées.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5. STOCKAGE -->
+  <div class="section">
+    <div class="section-num">05 — Stockage et sécurité</div>
+    <h2>Où sont stockées vos données ?</h2>
+    <p>Vos données sont hébergées sur <strong>Supabase</strong>, une infrastructure sécurisée basée dans l'Union Européenne. Supabase est conforme au RGPD et applique des mesures de sécurité conformes aux standards de l'industrie.</p>
+    <p>Les mots de passe sont chiffrés et jamais stockés en clair. Les communications entre l'application et nos serveurs sont chiffrées via HTTPS/TLS.</p>
+    <p>Vos vidéos et photos sont stockées sur Supabase Storage, accessibles uniquement aux utilisateurs autorisés.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 6. PARTAGE -->
+  <div class="section">
+    <div class="section-num">06 — Partage des données</div>
+    <h2>Partageons-nous vos données ?</h2>
+    <p>Nous ne partageons pas vos données personnelles avec des tiers, sauf dans les cas suivants :</p>
+    <ul class="policy-list">
+      <li><strong>Supabase</strong> — prestataire technique d'hébergement et de base de données</li>
+      <li><strong>Obligations légales</strong> — si la loi nous y oblige (décision de justice, autorité compétente)</li>
+    </ul>
+    <p>Nous ne vendons, ne louons, et ne cédons jamais vos données à des tiers à des fins commerciales.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 7. DROITS -->
+  <div class="section">
+    <div class="section-num">07 — Vos droits (RGPD)</div>
+    <h2>Vos droits sur vos données</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="right-icon">👁️</div>
+        <div class="right-title">Droit d'accès</div>
+        <div class="right-desc">Obtenir une copie de toutes vos données personnelles</div>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">✏️</div>
+        <div class="right-title">Droit de rectification</div>
+        <div class="right-desc">Corriger vos données si elles sont inexactes</div>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">🗑️</div>
+        <div class="right-title">Droit à l'effacement</div>
+        <div class="right-desc">Supprimer votre compte et toutes vos données</div>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">🚫</div>
+        <div class="right-title">Droit d'opposition</div>
+        <div class="right-desc">Vous opposer à certains traitements de vos données</div>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">📦</div>
+        <div class="right-title">Droit à la portabilité</div>
+        <div class="right-desc">Recevoir vos données dans un format lisible</div>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">⏸️</div>
+        <div class="right-title">Droit de limitation</div>
+        <div class="right-desc">Limiter le traitement de vos données</div>
+      </div>
+    </div>
+
+    <p>Pour exercer ces droits, contactez-nous à <strong>alexislopesbarradas@gmail.com</strong>. Nous nous engageons à répondre dans un délai de 30 jours.</p>
+    <p>Vous pouvez également adresser une réclamation à la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : <strong>cnil.fr</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8. MINEURS -->
+  <div class="section">
+    <div class="section-num">08 — Mineurs</div>
+    <h2>Utilisation par des mineurs</h2>
+    <p>BoxLink est destiné aux utilisateurs âgés de 12 ans et plus (classification iOS 12+). L'application contient une fonctionnalité de messagerie entre utilisateurs, ce qui justifie cette classification d'âge.</p>
+    <p>Si vous avez moins de 16 ans, l'utilisation de BoxLink requiert l'accord d'un parent ou tuteur légal.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 9. COOKIES -->
+  <div class="section">
+    <div class="section-num">09 — Cookies et traceurs</div>
+    <h2>Cookies et données de session</h2>
+    <p>BoxLink est une application mobile et n'utilise pas de cookies au sens traditionnel du terme. Des tokens de session sont stockés localement sur votre appareil pour maintenir votre connexion. Ces tokens sont supprimés lors de la déconnexion.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 10. MODIFICATIONS -->
+  <div class="section">
+    <div class="section-num">10 — Modifications</div>
+    <h2>Modifications de cette politique</h2>
+    <p>Nous pouvons mettre à jour cette politique de confidentialité pour refléter les évolutions de l'application ou les exigences légales. En cas de modification substantielle, vous serez informé via une notification dans l'application ou par email.</p>
+    <p>La date de dernière mise à jour est toujours indiquée en haut de cette page.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-box">
+    <h3>📬 Nous contacter</h3>
+    <p>Pour toute question relative à cette politique de confidentialité ou à vos données personnelles :</p>
+    <p style="margin-top:12px">
+      <strong>Email :</strong> <a href="mailto:alexislopesbarradas@gmail.com">alexislopesbarradas@gmail.com</a><br>
+      <strong>Application :</strong> BoxLink — L'app qui fait vivre la boxe
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 <strong>BoxLink</strong> · Tous droits réservés · Politique de confidentialité v1.0</p>
+    <p style="margin-top:8px">Conforme au RGPD · Hébergement UE · Données sécurisées</p>
+  </div>
+
+</div>
+</body>
+</html>

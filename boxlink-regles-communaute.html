@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoxLink — Règles de la communauté</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8251A;
+  --red-dim: rgba(232,37,26,0.12);
+  --red-border: rgba(232,37,26,0.25);
+  --bg: #080808;
+  --surface: #111111;
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.75);
+  --text-dim: rgba(255,255,255,0.35);
+  --white: #ffffff;
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.1);
+  --green-border: rgba(34,197,94,0.2);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'DM Sans', sans-serif; font-size: 16px;
+  line-height: 1.75; min-height: 100vh;
+}
+.site-header {
+  border-bottom: 1px solid var(--border); padding: 24px 48px;
+  display: flex; align-items: center; gap: 16px;
+  position: sticky; top: 0; background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(16px); z-index: 100;
+}
+.logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
+.logo span { color: var(--red); }
+.header-sep { width: 1px; height: 20px; background: var(--border); }
+.header-label { font-size: 13px; color: var(--text-dim); font-weight: 500; }
+.container { max-width: 760px; margin: 0 auto; padding: 72px 32px 120px; }
+.hero { margin-bottom: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red-dim); border: 1px solid var(--red-border);
+  color: var(--red); font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+}
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 20px; }
+.hero h1 span { color: var(--red); }
+.hero-meta { font-size: 14px; color: var(--text-dim); }
+.hero-meta strong { color: rgba(255,255,255,0.5); }
+
+.intro-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 32px; margin-bottom: 56px;
+  font-size: 15px; color: var(--text); line-height: 1.8;
+}
+.intro-box strong { color: var(--white); }
+
+/* RULE CARDS */
+.rules-section { margin-bottom: 52px; }
+.rules-section-title {
+  font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800;
+  color: var(--white); margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
+}
+.rules-grid { display: flex; flex-direction: column; gap: 16px; }
+
+.rule-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 24px 28px;
+  display: flex; align-items: flex-start; gap: 20px;
+}
+.rule-card.good { border-color: var(--green-border); background: var(--green-dim); }
+.rule-card.bad { border-color: var(--red-border); background: var(--red-dim); }
+
+.rule-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.rule-card.good .rule-icon { background: rgba(34,197,94,0.15); }
+.rule-card.bad .rule-icon { background: rgba(232,37,26,0.15); }
+
+.rule-content { flex: 1; }
+.rule-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.rule-desc { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+/* SANCTIONS */
+.sanctions {
+  background: rgba(232,37,26,0.06); border: 1px solid rgba(232,37,26,0.2);
+  border-radius: 16px; padding: 32px; margin-bottom: 52px;
+}
+.sanctions h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 20px; }
+.sanction-steps { display: flex; flex-direction: column; gap: 16px; }
+.sanction-step { display: flex; align-items: flex-start; gap: 20px; }
+.step-num {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(232,37,26,0.15); border: 1px solid rgba(232,37,26,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800;
+  color: var(--red); flex-shrink: 0;
+}
+.step-content { flex: 1; padding-top: 4px; }
+.step-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.step-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+/* SIGNALEMENT */
+.signalement-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 32px; margin-bottom: 52px;
+}
+.signalement-box h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+.signalement-box p { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 12px; }
+.signalement-box p:last-child { margin-bottom: 0; }
+.signalement-box a { color: var(--red); text-decoration: none; font-weight: 600; }
+
+.divider { height: 1px; background: var(--border); margin: 48px 0; }
+.footer { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border); text-align: center; font-size: 13px; color: var(--text-dim); }
+.footer strong { color: rgba(255,255,255,0.4); }
+
+@media (max-width: 600px) {
+  .site-header { padding: 20px 24px; }
+  .container { padding: 48px 20px 80px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Box<span>Link</span></div>
+  <div class="header-sep"></div>
+  <div class="header-label">Règles de la communauté</div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-tag">🥊 Communauté</div>
+    <h1>Règles de la<br><span>communauté</span></h1>
+    <div class="hero-meta">
+      <strong>Dernière mise à jour :</strong> 8 juin 2026 &nbsp;·&nbsp;
+      <strong>Application :</strong> BoxLink (iOS & Android)
+    </div>
+  </div>
+
+  <div class="intro-box">
+    BoxLink est une communauté bâtie par et pour les boxeurs francophones. Pour que chacun puisse s'entraîner, progresser et se connecter dans un environnement <strong>respectueux et sécurisé</strong>, ces règles s'appliquent à tous les utilisateurs sans exception.
+  </div>
+
+  <!-- CE QUI EST ENCOURAGÉ -->
+  <div class="rules-section">
+    <div class="rules-section-title">✅ Ce qu'on encourage</div>
+    <div class="rules-grid">
+      <div class="rule-card good">
+        <div class="rule-icon">🤝</div>
+        <div class="rule-content">
+          <div class="rule-title">Le respect mutuel</div>
+          <div class="rule-desc">Traite chaque boxeur comme tu voudrais être traité, quel que soit son niveau, son âge ou son origine.</div>
+        </div>
+      </div>
+      <div class="rule-card good">
+        <div class="rule-icon">💡</div>
+        <div class="rule-content">
+          <div class="rule-title">Le partage de connaissances</div>
+          <div class="rule-desc">Partage tes techniques, conseils nutrition et retours d'expérience pour faire progresser toute la communauté.</div>
+        </div>
+      </div>
+      <div class="rule-card good">
+        <div class="rule-icon">🎯</div>
+        <div class="rule-content">
+          <div class="rule-title">Les profils authentiques</div>
+          <div class="rule-desc">Un vrai nom, un vrai niveau, de vraies photos. L'authenticité est la base de la confiance entre boxeurs.</div>
+        </div>
+      </div>
+      <div class="rule-card good">
+        <div class="rule-icon">📣</div>
+        <div class="rule-content">
+          <div class="rule-title">Le signalement responsable</div>
+          <div class="rule-desc">Si tu vois un comportement qui enfreint ces règles, utilise le bouton de signalement — tu protèges toute la communauté.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CE QUI EST INTERDIT -->
+  <div class="rules-section">
+    <div class="rules-section-title">🚫 Ce qui est interdit</div>
+    <div class="rules-grid">
+      <div class="rule-card bad">
+        <div class="rule-icon">😤</div>
+        <div class="rule-content">
+          <div class="rule-title">Harcèlement et intimidation</div>
+          <div class="rule-desc">Insultes, menaces, messages répétés non désirés, comportements intimidants envers un autre utilisateur.</div>
+        </div>
+      </div>
+      <div class="rule-card bad">
+        <div class="rule-icon">🎭</div>
+        <div class="rule-content">
+          <div class="rule-title">Faux profils et usurpation</div>
+          <div class="rule-desc">Se faire passer pour quelqu'un d'autre, créer plusieurs comptes, utiliser une fausse identité.</div>
+        </div>
+      </div>
+      <div class="rule-card bad">
+        <div class="rule-icon">🔞</div>
+        <div class="rule-content">
+          <div class="rule-title">Contenu inapproprié</div>
+          <div class="rule-desc">Contenu sexuel, violence gratuite, gore, contenu choquant ou offensant non lié à la boxe.</div>
+        </div>
+      </div>
+      <div class="rule-card bad">
+        <div class="rule-icon">📢</div>
+        <div class="rule-content">
+          <div class="rule-title">Spam et publicité non autorisée</div>
+          <div class="rule-desc">Messages commerciaux non sollicités, promotion de produits ou services sans autorisation de BoxLink.</div>
+        </div>
+      </div>
+      <div class="rule-card bad">
+        <div class="rule-icon">⚖️</div>
+        <div class="rule-content">
+          <div class="rule-title">Discrimination</div>
+          <div class="rule-desc">Propos racistes, sexistes, homophobes ou discriminatoires de toute nature, qu'ils soient en message privé ou public.</div>
+        </div>
+      </div>
+      <div class="rule-card bad">
+        <div class="rule-icon">💰</div>
+        <div class="rule-content">
+          <div class="rule-title">Escroquerie</div>
+          <div class="rule-desc">Toute tentative de tromper un autre utilisateur, notamment pour obtenir de l'argent ou des informations personnelles.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SANCTIONS -->
+  <div class="sanctions">
+    <h3>⚡ Conséquences en cas de violation</h3>
+    <div class="sanction-steps">
+      <div class="sanction-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Avertissement</div>
+          <div class="step-desc">Pour les infractions mineures ou une première violation. Notification envoyée à l'utilisateur.</div>
+        </div>
+      </div>
+      <div class="sanction-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Suspension temporaire</div>
+          <div class="step-desc">Blocage du compte de 7 à 30 jours selon la gravité. L'accès à l'application est restreint.</div>
+        </div>
+      </div>
+      <div class="sanction-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Bannissement définitif</div>
+          <div class="step-desc">Pour les violations graves ou répétées. Suppression permanente du compte, sans possibilité de recréation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNALEMENT -->
+  <div class="signalement-box">
+    <h3>🚨 Signaler un comportement</h3>
+    <p>Tu peux signaler un utilisateur ou un contenu directement depuis l'application en appuyant sur les trois points (···) sur un profil ou un post.</p>
+    <p>Chaque signalement est examiné par notre équipe. Pour les cas urgents, contacte-nous directement à <a href="mailto:boxlink.app@gmail.com">boxlink.app@gmail.com</a> en précisant le nom d'utilisateur concerné.</p>
+    <p>Les signalements abusifs (faux signalements répétés pour nuire à un utilisateur) peuvent entraîner des sanctions contre le signalant.</p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 <strong>BoxLink</strong> · Tous droits réservés · Règles communautaires v1.0</p>
+    <p style="margin-top:8px">Ces règles s'appliquent à tous les utilisateurs sans exception</p>
+  </div>
+
+</div>
+</body>
+</html>
